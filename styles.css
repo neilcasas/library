@@ -52,12 +52,25 @@
 .library {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+#library-header {
+    font-size: 3rem;
+    margin: 1rem;
 }
 
 .library-wrapper {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: 1.5rem;
+    width: 100%;
+}
+
+.library-wrapper>div {
+    background-color: rgb(37, 37, 37);
 }
 
 #add-button {
