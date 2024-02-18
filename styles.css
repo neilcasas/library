@@ -3,14 +3,15 @@
 
 :root {
     --main-font: 'Montserrat';
-    --bg-color: #144272;
-    --accent-color: #2C74B3;
-    --tertiary-color: #2C74B3;
+    --bg-color: #1a1a1a;
+    --accent-color: #008170;
+    --tertiary-color: #005B41;
     --font-color: whitesmoke;
 }
 
 * {
     font-family: var(--main-font);
+    font-size: 18px;
     color: var(--font-color);
     margin: 0;
     padding: 0;
@@ -26,6 +27,7 @@
 
 .header {
     display: flex;
+    padding: 0.8rem 0.5rem;
     background: var(--accent-color);
     justify-content: space-between;
     align-items: center;
@@ -39,9 +41,11 @@
 }
 
 #add-button {
+    background: var(--tertiary-color);
     position: absolute;
     bottom: 0;
     right: 0;
+
 }
 
 .footer {
