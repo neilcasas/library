@@ -42,10 +42,20 @@
 
 #add-button {
     background: var(--tertiary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: absolute;
     bottom: 0;
     right: 0;
-
+    font-size: 2rem;
+    padding: 0.8rem;
+    height: 3rem;
+    width: 3rem;
+    margin: 3rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 20px;
 }
 
 .footer {
