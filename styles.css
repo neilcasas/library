@@ -28,7 +28,6 @@
 
 .header {
     display: flex;
-    flex: 1;
     background: var(--accent-color);
     justify-content: space-between;
     align-items: center;
@@ -49,6 +48,7 @@
     position: relative;
     flex-direction: column;
     height: 100%;
+    flex: 1;
 }
 
 .library {
@@ -81,6 +81,7 @@
     background-color: rgb(37, 37, 37);
     cursor: pointer;
     padding: 1rem;
+    border-radius: 20px;
 }
 
 .book .title {
