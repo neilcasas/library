@@ -3,17 +3,22 @@
 
 :root {
     --main-font: 'Montserrat';
+    --bg-color: #144272;
+    --accent-color: #2C74B3;
+    --tertiary-color: #2C74B3;
+    --font-color: whitesmoke;
 }
 
 * {
     font-family: var(--main-font);
+    color: var(--font-color);
     margin: 0;
     padding: 0;
-    border: 0.5px dotted red;
 }
 
 .container {
     display: flex;
+    background: var(--bg-color);
     flex-direction: column;
     height: 100vh;
     justify-content: space-between;
@@ -21,10 +26,26 @@
 
 .header {
     display: flex;
+    background: var(--accent-color);
     justify-content: space-between;
+    align-items: center;
+}
+
+.main {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    height: 100%;
+}
+
+#add-button {
+    position: absolute;
+    bottom: 0;
+    right: 0;
 }
 
 .footer {
     display: flex;
+    background: var(--accent-color);
     justify-content: center;
 }
