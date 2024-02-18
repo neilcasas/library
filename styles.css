@@ -49,6 +49,17 @@
     height: 100%;
 }
 
+.library {
+    display: flex;
+    flex-direction: column;
+}
+
+.library-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 1.5rem;
+}
+
 #add-button {
     background: var(--accent-color);
     display: flex;
