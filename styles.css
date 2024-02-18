@@ -1,4 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+:root {
+    --main-font: 'Montserrat';
+}
+
 * {
+    font-family: var(--main-font);
     margin: 0;
     padding: 0;
     border: 0.5px dotted red;
@@ -13,4 +21,10 @@
 
 .header {
     display: flex;
+    justify-content: space-between;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
 }
