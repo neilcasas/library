@@ -19,6 +19,7 @@
 
 .container {
     display: flex;
+    flex: 1;
     background: var(--bg-color);
     flex-direction: column;
     height: 100vh;
@@ -27,6 +28,7 @@
 
 .header {
     display: flex;
+    flex: 1;
     background: var(--accent-color);
     justify-content: space-between;
     align-items: center;
@@ -52,8 +54,8 @@
 .library {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    flex: 1;
     gap: 2rem;
 }
 
@@ -63,13 +65,19 @@
 }
 
 .library-wrapper {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    gap: 1.5rem;
-    width: 100%;
+    flex: 1;
+    width: 100%
 }
 
-.library-wrapper>div {
+.library-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    padding: 1rem;
+    margin: 1rem;
+    gap: 1.5rem;
+}
+
+.library-grid>div {
     background-color: rgb(37, 37, 37);
 }
 
