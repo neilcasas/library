@@ -8,6 +8,16 @@ function Book(title, author, pages, read) {
     this.read = read;
 }
 
+// Toggle read for prototype
+Book.prototype.toggleRead = function () {
+    this.read = !this.read;
+}
+
+function toggleRead(index) {
+    myLibrary[index].toggleRead();
+    render();
+}
+
 // Opening and closing Modal
 const modal = document.querySelector('.modal');
 const openModalBtn = document.querySelector('#open-modal');
@@ -60,7 +70,7 @@ function render() {
                                     <div class="pages">${book.pages} pages</div>
                                 </div>
                                 <div class="book-btns">
-                                    <button>${book.read === true ? 'Read' : 'Not Read'}</button>
+                                    <button onclick="toggleRead(${i})">${book.read === true ? 'Read' : 'Not Read'}</button>
                                     <button class="remove" onclick="removeBook(${i})">Remove</button>
                                 </div>`;
             libraryGrid.appendChild(bookEl);
@@ -69,10 +79,11 @@ function render() {
     }
 }
 
+// Remove book 
 function removeBook(index) {
     myLibrary.splice(index, 1);
     render();
 }
 
 
-render() // render once every open of page
+render(); // render once every open of page
