@@ -21,6 +21,7 @@ addBtn.addEventListener("click", () => {
     addBookToLibrary();
     event.preventDefault();
 })
+
 const closeModalBtn = document.querySelector('.close');
 closeModalBtn.addEventListener("click", () => {
     modal.classList.remove("open");
@@ -40,9 +41,13 @@ function addBookToLibrary() {
 }
 
 // Render added books
+const libraryGrid = document.querySelector('.library-grid');
 function render() {
-    let libraryGrid = document.querySelector('.library-grid');
     libraryGrid.innerHTML = ''; // reset HTML before adding an element
+    // Show library is empty if array is empty
+    if (myLibrary.length == 0) {
+        libraryGrid.innerHTML = 'Your library is empty.';
+    }
     for (let i = 0; i < myLibrary.length; i++) {
         let book = myLibrary[i];
         let bookEl = document.createElement('div');
@@ -54,8 +59,16 @@ function render() {
                             </div>
                             <div class="book-btns">
                                 <button>${book.read === true ? 'Read' : 'Not Read'}</button>
-                                <button class="remove">Remove</button>
+                                <button class="remove" onclick="removeBook(${i})">Remove</button>
                             </div>`;
         libraryGrid.appendChild(bookEl);
     }
 }
+
+function removeBook(index) {
+    myLibrary.splice(index, 1);
+    render();
+}
+
+
+render() // render once every open of page
