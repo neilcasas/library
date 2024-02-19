@@ -10,14 +10,20 @@
 
 <body>
     <div class="container">
+
+        <!-- Header -->
         <div class="header">
             <h1>Library</h1>
             <button id="add-button">Add Book</button>
         </div>
+
+        <!--Main Content-->
         <div class="main">
+
+            <!--Modal-->
             <div class="modal">
                 <h2>Add a New Book</h2>
-                <form id="add-book-form" action="">
+                <form id="modal-form" action="post">
                     <label for="title">Title:</label>
                     <input type="text" id="title">
                     <label for="author">Author:</label>
@@ -27,9 +33,10 @@
                     <label for="read">Have you read this book?</label>
                     <input type="checkbox" name="read" id="read">
                     <button type="submit">Add Book</button>
-
                 </form>
             </div>
+
+            <!--Library-->
             <div class="library">
                 <h1 id="library-header">My Books</h1>
                 <div class="library-wrapper">
@@ -81,13 +88,15 @@
                     </div>
                 </div>
             </div>
-
         </div>
+
+        <!--Footer-->
         <div class="footer">
             <div class="footer-text">
                 Created by Neil Casas
             </div>
         </div>
+
     </div>
 </body>
 <script src="script.js"></script>
