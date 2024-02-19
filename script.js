@@ -11,20 +11,20 @@ function Book(title, author, pages, read) {
 // Opening and closing Modal
 const modal = document.querySelector('.modal');
 const openModalBtn = document.querySelector('#open-modal');
-openModalBtn.addEventListener("click", () => {
-    modal.classList.add("open");
+openModalBtn.addEventListener('click', () => {
+    modal.classList.add('open');
 })
 
 const addBtn = document.querySelector('.add-book');
-addBtn.addEventListener("click", () => {
-    modal.classList.remove("open");
+addBtn.addEventListener('click', () => {
+    modal.classList.remove('open');
     addBookToLibrary();
     event.preventDefault();
 })
 
 const closeModalBtn = document.querySelector('.close');
-closeModalBtn.addEventListener("click", () => {
-    modal.classList.remove("open");
+closeModalBtn.addEventListener('click', () => {
+    modal.classList.remove('open');
     event.preventDefault();
 })
 
@@ -44,24 +44,28 @@ function addBookToLibrary() {
 const libraryGrid = document.querySelector('.library-grid');
 function render() {
     libraryGrid.innerHTML = ''; // reset HTML before adding an element
+
     // Show library is empty if array is empty
     if (myLibrary.length == 0) {
         libraryGrid.innerHTML = 'Your library is empty.';
-    }
-    for (let i = 0; i < myLibrary.length; i++) {
-        let book = myLibrary[i];
-        let bookEl = document.createElement('div');
-        bookEl.setAttribute('class', 'book');
-        bookEl.innerHTML = `<div class="book-content">
-                            <div class="title">${book.title}</div>
-                                <div class="author">by ${book.author}</div>
-                                <div class="pages">${book.pages} pages</div>
-                            </div>
-                            <div class="book-btns">
-                                <button>${book.read === true ? 'Read' : 'Not Read'}</button>
-                                <button class="remove" onclick="removeBook(${i})">Remove</button>
-                            </div>`;
-        libraryGrid.appendChild(bookEl);
+        libraryGrid.classList.add('empty');
+    } else {
+        for (let i = 0; i < myLibrary.length; i++) {
+            let book = myLibrary[i];
+            let bookEl = document.createElement('div');
+            bookEl.setAttribute('class', 'book');
+            bookEl.innerHTML = `<div class="book-content">
+                                <div class="title">${book.title}</div>
+                                    <div class="author">by ${book.author}</div>
+                                    <div class="pages">${book.pages} pages</div>
+                                </div>
+                                <div class="book-btns">
+                                    <button>${book.read === true ? 'Read' : 'Not Read'}</button>
+                                    <button class="remove" onclick="removeBook(${i})">Remove</button>
+                                </div>`;
+            libraryGrid.appendChild(bookEl);
+        }
+        libraryGrid.classList.remove('empty');
     }
 }
 

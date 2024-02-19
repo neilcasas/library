@@ -162,6 +162,9 @@ input[type="text"] {
     margin: 0rem 1.5rem;
 }
 
+.library-grid.empty {
+    color: grey;
+}
 
 /* BOOK STYLES */
 
@@ -178,6 +181,8 @@ input[type="text"] {
 .book .title {
     font-size: 1.2rem;
     font-weight: 800;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .book-btns {
