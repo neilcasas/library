@@ -42,16 +42,18 @@ function addBookToLibrary() {
 // Render added books
 function render() {
     let libraryGrid = document.querySelector('.library-grid');
+    libraryGrid.innerHTML = ''; // reset HTML before adding an element
     for (let i = 0; i < myLibrary.length; i++) {
         let book = myLibrary[i];
         let bookEl = document.createElement('div');
+        bookEl.setAttribute('class', 'book');
         bookEl.innerHTML = `<div class="book-content">
                             <div class="title">${book.title}</div>
                                 <div class="author">by ${book.author}</div>
                                 <div class="pages">${book.pages} pages</div>
                             </div>
                             <div class="book-btns">
-                                <button>${book.read}</button>
+                                <button>${book.read === true ? 'Read' : 'Not Read'}</button>
                                 <button class="remove">Remove</button>
                             </div>`;
         libraryGrid.appendChild(bookEl);
