@@ -105,7 +105,8 @@ button:hover {
     display: flex;
     flex-direction: column;
     background-color: var(--bg-color);
-    padding: 1rem;
+    padding: 2rem;
+    gap: 1rem;
     border-radius: 20px;
 }
 
@@ -125,13 +126,18 @@ input[type="text"] {
     border: none;
     border-radius: 20px;
     padding: 0.3rem 0.5rem;
-    background-color: var(--tertiary-color);
-    color: var(--font-color)
+    background-color: whitesmoke;
+    color: var(--bg-color);
 }
 
 .modal.open {
     opacity: 1;
     z-index: 999;
+}
+
+.modal-heading {
+    font-size: 2rem;
+    font-weight: 700;
 }
 
 /* LIBRARY STYLES */
