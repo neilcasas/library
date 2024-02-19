@@ -122,7 +122,8 @@ button:hover {
     gap: 0.6rem;
 }
 
-input[type="text"] {
+input[type="text"],
+input[type="number"] {
     appearance: none;
     border: none;
     border-radius: 20px;
