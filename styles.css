@@ -105,6 +105,11 @@ button:hover {
     gap: 0.6rem;
 }
 
+.modal-buttons {
+    display: flex;
+    gap: 0.6rem;
+}
+
 input[type="text"] {
     appearance: none;
     border: none;

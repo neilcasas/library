@@ -1,3 +1,4 @@
+// Data structures
 const myLibrary = [];
 
 function Book(title, author, pages, read) {
@@ -7,18 +8,23 @@ function Book(title, author, pages, read) {
     this.read = read;
 }
 
-// User Interface
+// User interface
 const addBtn = document.querySelector('.add-button');
-const libraryGrid = document.querySelector('.library-grid');
 const openModalBtn = document.querySelector('#open-modal');
 const modal = document.querySelector('.modal');
+const closeModalBtn = document.querySelector('.close-button');
+const libraryGrid = document.querySelector('.library-grid');
 
-
+// Opening and closing Modal
 openModalBtn.addEventListener("click", () => {
     modal.classList.add("open");
     console.log('clicked');
 })
 
 addBtn.addEventListener("click", () => {
+    modal.classList.remove("open");
+})
+
+closeModalBtn.addEventListener("click", () => {
     modal.classList.remove("open");
 })
