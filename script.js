@@ -33,16 +33,27 @@ function addBookToLibrary() {
     let title = document.getElementById('title').value;
     let author = document.getElementById('author').value;
     let pages = document.getElementById('pages').value;
-    let read = document.getElementById('read').value;
+    let read = document.getElementById('read').checked;
     let newBook = new Book(title, author, pages, read);
-    console.log(newBook);
     myLibrary.push(newBook);
+    render();
 }
 
 // Render added books
 function render() {
-    const libraryGrid = document.querySelector('.library-grid');
+    let libraryGrid = document.querySelector('.library-grid');
     for (let i = 0; i < myLibrary.length; i++) {
-        console.log(myLibrary[i]);
+        let book = myLibrary[i];
+        let bookEl = document.createElement('div');
+        bookEl.innerHTML = `<div class="book-content">
+                            <div class="title">${book.title}</div>
+                                <div class="author">by ${book.author}</div>
+                                <div class="pages">${book.pages} pages</div>
+                            </div>
+                            <div class="book-btns">
+                                <button>${book.read}</button>
+                                <button class="remove">Remove</button>
+                            </div>`;
+        libraryGrid.appendChild(bookEl);
     }
 }
