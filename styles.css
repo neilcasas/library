@@ -94,12 +94,24 @@ button:hover {
 .modal-inner {
     display: flex;
     flex-direction: column;
+    background-color: var(--bg-color);
+    padding: 1rem;
+    border-radius: 20px;
 }
 
 #modal-form {
     display: flex;
     flex-direction: column;
     gap: 0.6rem;
+}
+
+input[type="text"] {
+    appearance: none;
+    border: none;
+    border-radius: 20px;
+    padding: 0.3rem 0.5rem;
+    background-color: VAR(--accent-color);
+    color: var(--font-color)
 }
 
 .modal.open {
