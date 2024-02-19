@@ -63,7 +63,7 @@ button:hover {
     color: white;
 }
 
-#add-button {
+#open-modal {
     margin-right: 0.5rem;
 }
 
@@ -81,13 +81,14 @@ button:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgba(0, 0, 0, 0.3);
-    opacity: 100;
+    background-color: rgba(0, 0, 0, 0.368);
+    opacity: 0;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
+    z-index: -1;
 }
 
 .modal-inner {
@@ -99,6 +100,11 @@ button:hover {
     display: flex;
     flex-direction: column;
     gap: 0.6rem;
+}
+
+.modal.open {
+    opacity: 1;
+    z-index: 999;
 }
 
 /* LIBRARY STYLES */
