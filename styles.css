@@ -108,6 +108,7 @@ button:hover {
     padding: 2rem;
     gap: 1rem;
     border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 
 #modal-form {
@@ -176,6 +177,7 @@ input[type="text"] {
     cursor: pointer;
     padding: 1rem;
     border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 
 .book .title {
