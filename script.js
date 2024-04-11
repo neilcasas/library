@@ -46,12 +46,15 @@ class Book {
     set read(value) {
         this._read = value;
     }
+    toggleRead() {
+        this.read = !this.read;
+    }
 
 }
-// Toggle read for prototype
-Book.prototype.toggleRead = function () {
-    this.read = !this.read;
-}
+// // Toggle read for prototype
+// Book.prototype.toggleRead = function () {
+//     this.read = !this.read;
+// }
 
 function toggleRead(index) {
     myLibrary[index].toggleRead();
