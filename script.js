@@ -1,13 +1,53 @@
 // Data structures
 const myLibrary = [];
 
-function Book(title, author, pages, read) {
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.read = read;
-}
+// function Book(title, author, pages, read) {
+//     this.title = title;
+//     this.author = author;
+//     this.pages = pages;
+//     this.read = read;
+// }
 
+class Book {
+    constructor(title, author, pages, read) {
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.read = read;
+    }
+
+    get title() {
+        return this._title;
+    }
+    set title(value) {
+        this._title = value;
+    }
+
+    get author() {
+        return this._author;
+    }
+
+    set author(value) {
+        this._author = value;
+    }
+
+    get pages() {
+        return this._pages;
+    }
+
+    set pages(value) {
+        this._pages = value;
+    }
+
+    get read() {
+        return this._read;
+    }
+
+    set read(value) {
+        this._read = value;
+    }
+
+}
 // Toggle read for prototype
 Book.prototype.toggleRead = function () {
     this.read = !this.read;
