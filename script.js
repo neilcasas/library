@@ -117,5 +117,4 @@ function removeBook(index) {
     render();
 }
 
-
 render(); // render once every open of page
